@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Yakushenko\\Documents\\Projects\\C\u002B\u002B\\oop-khpi\\lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40C839F7-2B1B-4E63-A8BF-324B4900D697}|lab1\\lab1.vcxproj|C:\\Users\\Yakushenko\\Documents\\Projects\\C\u002B\u002B\\oop-khpi\\lab1\\lab1\\lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{40C839F7-2B1B-4E63-A8BF-324B4900D697}|lab1\\lab1.vcxproj|solutionrelative:lab1\\lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FB742602-A687-4EE1-A23F-1834EEE99A47}|lab1.vcxproj|C:\\Users\\Yakushenko\\Documents\\Projects\\C\u002B\u002B\\oop-khpi\\lab1\\lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FB742602-A687-4EE1-A23F-1834EEE99A47}|lab1.vcxproj|solutionrelative:lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,13 +20,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "lab1.cpp",
-              "DocumentMoniker": "C:\\Users\\Yakushenko\\Documents\\Projects\\C\u002B\u002B\\oop-khpi\\lab1\\lab1\\lab1.cpp",
-              "RelativeDocumentMoniker": "lab1\\lab1.cpp",
-              "ToolTip": "C:\\Users\\Yakushenko\\Documents\\Projects\\C\u002B\u002B\\oop-khpi\\lab1\\lab1\\lab1.cpp",
-              "RelativeToolTip": "lab1\\lab1.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMEAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\Yakushenko\\Documents\\Projects\\C\u002B\u002B\\oop-khpi\\lab1\\lab1.cpp",
+              "RelativeDocumentMoniker": "lab1.cpp",
+              "ToolTip": "C:\\Users\\Yakushenko\\Documents\\Projects\\C\u002B\u002B\\oop-khpi\\lab1\\lab1.cpp",
+              "RelativeToolTip": "lab1.cpp",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAAwJwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-08T20:53:16.586Z",
+              "WhenOpened": "2024-05-08T21:01:47.503Z",
               "EditorCaption": ""
             }
           ]
