@@ -1,2 +1,2 @@
-# oop-khpi ¯\_(ツ)_/¯
+# ¯\\\_(ツ)_/¯
 Object-oriented programming KHPI
