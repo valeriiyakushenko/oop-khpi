@@ -1,0 +1,3 @@
+C:/Users/Yakushenko/Documents/Projects/C++/oop-khpi/lab2/out/build/x64-debug/CMakeFiles/lab2.dir
+C:/Users/Yakushenko/Documents/Projects/C++/oop-khpi/lab2/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/Users/Yakushenko/Documents/Projects/C++/oop-khpi/lab2/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
