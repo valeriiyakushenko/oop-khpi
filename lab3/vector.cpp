@@ -2,38 +2,52 @@
 #include "vector.h"
 using namespace std;
 
-Vector::Vector() : x(0.0), y(0.0) {
-    cout << "Default constructor\n";
+Vector::Vector() 
+{
+    x = 0;
+    y = 0;
+    cout << "Constructor " << endl;
 }
 
-Vector::Vector(double valueX, double valueY) : x(valueX), y(valueY) {
-    cout << "Parameterized constructor\n";
+Vector::Vector(double x, double y)
+{
+    this->x = x;
+    this->y = y;
+    cout << "Parameterized constructor " << endl;
 }
 
-Vector::Vector(const Vector& src) : x(src.x), y(src.y) {
-    cout << "Copy Constructor\n";
+Vector::Vector(const Vector& other)
+{
+    this->x = other.x;
+    this->y = other.y;
+    cout << "Copy Constructor " << endl;
 }
 
-Vector::~Vector() {
-    cout << "Destructor is working\n";
+Vector::~Vector() 
+{
+    cout << "Destructor " << endl;
 }
 
-void Vector::setX(double valueX) {
-    x = valueX;
+void Vector::setX(double x) 
+{
+    this->x = x;
 }
 
-void Vector::setY(double valueY) {
-    y = valueY;
+void Vector::setY(double y) 
+{
+    this->y = y;
 }
 
 double Vector::getX() {
     return x;
 }
 
-double Vector::getY() {
+double Vector::getY() 
+{
     return y;
 }
 
-void Vector::showVector() {
+void Vector::showVector() 
+{
     cout << "Vector x: " << x << " y: " << y << endl;
 }

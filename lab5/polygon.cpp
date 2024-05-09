@@ -7,7 +7,7 @@ Polygon::Polygon()
     size = 0;
     sides = 0;
 
-    cout << "Constructor " << this << endl;
+    cout << "Constructor " << endl;
 }
 
 Polygon::Polygon(int size)
@@ -20,7 +20,7 @@ Polygon::Polygon(int size)
         sides[i] = i;
     }
 
-    cout << "Constructor " << this << endl;
+    cout << "Parameterized Constructor " << endl;
 }
 
 Polygon::Polygon(const Polygon& other)
@@ -33,7 +33,7 @@ Polygon::Polygon(const Polygon& other)
         this->sides[i] = other.sides[i];
     }
 
-    cout << "Copy Constructor " << this << endl;
+    cout << "Copy Constructor " << endl;
 }
 
 Polygon::~Polygon()

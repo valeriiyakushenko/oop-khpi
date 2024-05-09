@@ -23,8 +23,8 @@ void Taxi::setTrip(char* dep, char* des, int year, int month, int day) {
     date[trip_index][0] = year;
     date[trip_index][1] = month;
     date[trip_index][2] = day;
-    tripList[trip_index][0] = departure;
-    tripList[trip_index][1] = destination;
+    trip_list[trip_index][0] = departure;
+    trip_list[trip_index][1] = destination;
     calculateStage(year, month, day);
     trip_index++;
 }
@@ -45,7 +45,7 @@ void Taxi::setSalary(float s) {
 void Taxi::showTrips() {
     for (int i = 0; i < trip_index; i++)
     {
-        cout << "Trip " << i + 1 << ", From: " << tripList[i][0] << ", To: " << tripList[i][1] << ", date: " << date[i][0] << '.' << date[i][1] << '.' << date[i][2] << endl;
+        cout << "Trip " << i + 1 << ", From: " << trip_list[i][0] << ", To: " << trip_list[i][1] << ", date: " << date[i][0] << '.' << date[i][1] << '.' << date[i][2] << endl;
     }
 }
 
@@ -54,11 +54,11 @@ void Taxi::calculateStage(int currentYear, int currentMonth, int currentDay) {
         stage = 0;
     else
     {
-        int daysDelta = currentDay - date[0][2];
-        if (daysDelta < 0)
+        int days = currentDay - date[0][2];
+        if (days < 0)
             currentMonth -= 1;
-        int monthsDelta = currentMonth - date[0][1];
-        if (monthsDelta < 0)
+        int months = currentMonth - date[0][1];
+        if (months < 0)
             currentYear -= 1;
         stage = currentYear - date[0][0];
     }

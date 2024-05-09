@@ -5,6 +5,8 @@ using namespace std;
 int main()
 {
     Polygon a(5), b(a);
+    cout << "a: " << a << endl;
+    cout << "b: " << b << endl;
 
     cout << "\nOperator[]" << endl;
     cout << "a[4]: " << a[4] << endl;

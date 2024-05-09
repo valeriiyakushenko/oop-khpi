@@ -18,7 +18,7 @@ private:
     float salary;
     static const int maxlen = 255;
     int date[maxlen][3];
-    string tripList[maxlen][2];
+    string trip_list[maxlen][2];
 
     void calculateStage(int currentYear, int currentMonth, int currentDay);
 
