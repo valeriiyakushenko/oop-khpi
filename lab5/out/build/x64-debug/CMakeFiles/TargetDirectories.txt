@@ -1,3 +1,0 @@
-C:/Users/Yakushenko/Documents/Projects/C++/oop-khpi/lab5/out/build/x64-debug/CMakeFiles/lab5.dir
-C:/Users/Yakushenko/Documents/Projects/C++/oop-khpi/lab5/out/build/x64-debug/CMakeFiles/edit_cache.dir
-C:/Users/Yakushenko/Documents/Projects/C++/oop-khpi/lab5/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
