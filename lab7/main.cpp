@@ -6,7 +6,20 @@ using namespace std;
 
 int main()
 {
-	Pair a(3, 6), b(2, 8);
+	Pair a(2, 3), b(12, 5);
+    Fraction c(4, 2), d(1, 13);
+
+    if (c != d)
+    {
+        cout << "True" << endl;
+    } else
+    {
+        cout << "False" << endl;
+    }
+
+    cout << c.getFirst() << endl;
+    c.setFirst(6);
+    cout << c.getFirst() << endl;
 
 	return 0;
 }

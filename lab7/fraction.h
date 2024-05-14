@@ -12,6 +12,11 @@ protected:
     int fractionalPart;
 
 public:
+    Fraction();
+    Fraction(int wholePart, int fractionalPart);
+    Fraction(const Fraction& other);
+    ~Fraction();
+    
     bool operator== (const Fraction& other);
     bool operator!= (const Fraction& other);
     bool operator> (const Fraction& other);
