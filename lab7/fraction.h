@@ -7,10 +7,6 @@ using namespace std;
 
 class Fraction : public Pair
 {
-protected:
-    int wholePart;
-    int fractionalPart;
-
 public:
     Fraction();
     Fraction(int wholePart, int fractionalPart);

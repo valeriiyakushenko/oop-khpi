@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	Pair a(2, 3), b(12, 5);
-    Fraction c(4, 2), d(1, 13);
+    Fraction c(1, 2), d(1, 13);
 
     if (c != d)
     {
