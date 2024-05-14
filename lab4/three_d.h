@@ -1,5 +1,7 @@
 ﻿#ifndef THREE_D_H
 #define THREE_D_H
+#include <iostream>
+using namespace std;
 
 class three_d
 {
@@ -7,27 +9,30 @@ private:
     int x, y, z;
 
 public:
-    three_d()
+    three_d();
+    three_d(int x, int y, int z);
+    three_d(const three_d& other);
+    ~three_d();
+
+    three_d operator= (const three_d& other)
     {
-        x = y = z = 0;
+        x = other.x;
+        y = other.y;
+        z = other.z;
+        return *this;
     }
 
-    three_d(int x, int y, int z)
-    {
-        this->x = x; this->y = y; this->z = z;
-    }
-
-    three_d operator+ (const three_d& other);
     bool operator== (const three_d& other);
-    three_d operator-- ();
-    three_d operator--(int notused);
-    three_d operator= (const three_d& other);
+    friend three_d operator-- (three_d& other);
+    friend three_d operator-- (three_d& other, int notused);
 
-    int getX() { return x; }
-    int gexY() { return y; }
-    int getZ() { return z; }
+    int getX();
+    int getY();
+    int getZ();
 
     void show();
 };
+
+three_d operator+ (three_d& obj, three_d& other);
 
 #endif 
