@@ -1,8 +1,6 @@
 ﻿#ifndef VECTOR_H
 #define VECTOR_H
-
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
@@ -20,7 +18,6 @@ public:
 
     void setX(double x);
     void setY(double y);
-
     double getX();
     double getY();
 

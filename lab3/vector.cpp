@@ -1,6 +1,4 @@
-﻿#include <iostream>
-#include "vector.h"
-using namespace std;
+﻿#include "vector.h"
 
 Vector::Vector() 
 {
@@ -38,7 +36,8 @@ void Vector::setY(double y)
     this->y = y;
 }
 
-double Vector::getX() {
+double Vector::getX()
+{
     return x;
 }
 
