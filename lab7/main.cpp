@@ -4,22 +4,40 @@
 
 using namespace std;
 
+void showPair(const Pair& src)
+{
+    cout << "First: " << src.getFirst() << ", Second: " << src.getSecond() << endl;
+}
+
+Pair newPair()
+{
+    Pair object(0, 0);
+    return object;
+}
+
 int main()
 {
-	Pair a(2, 3), b(12, 5);
-    Fraction c(1, 2), d(1, 13);
+	Pair a(5, 2);
+    Fraction b(4, 3), c(6, 7);
 
-    if (c != d)
-    {
-        cout << "True" << endl;
-    } else
-    {
-        cout << "False" << endl;
-    }
+    Pair d = newPair();
+    showPair(d);
 
-    cout << c.getFirst() << endl;
-    c.setFirst(6);
-    cout << c.getFirst() << endl;
+    cout << "a > d: ";
+    if (a > d) {cout << "True" << endl;}
+    else {cout << "False" << endl;}
+
+    cout << "c < b: ";
+    if (c < b) {cout << "True" << endl;}
+    else {cout << "False" << endl;}
+
+    cout << "c == b: ";
+    if (c == b) {cout << "True" << endl;}
+    else {cout << "False" << endl;}
+
+    cout << "c == b: ";
+    if (c != b) {cout << "True" << endl;}
+    else {cout << "False" << endl;}
 
 	return 0;
 }
