@@ -23,6 +23,5 @@ int main()
     cin >> a;
     cout << "a: " << a << endl << endl;
 
-
     return 0;
 }

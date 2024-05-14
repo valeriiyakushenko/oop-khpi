@@ -1,13 +1,9 @@
-﻿#include <iostream>
-#include "polygon.h"
-using namespace std;
+﻿#include "polygon.h"
 
 Polygon::Polygon()
 {
     size = 0;
     sides = 0;
-
-    cout << "Constructor " << endl;
 }
 
 Polygon::Polygon(int size)
@@ -19,8 +15,6 @@ Polygon::Polygon(int size)
     {
         sides[i] = i;
     }
-
-    cout << "Parameterized Constructor " << endl;
 }
 
 Polygon::Polygon(const Polygon& other)
@@ -32,15 +26,11 @@ Polygon::Polygon(const Polygon& other)
     {
         this->sides[i] = other.sides[i];
     }
-
-    cout << "Copy Constructor " << endl;
 }
 
 Polygon::~Polygon()
 {
     delete[] sides;
-
-    cout << "Destructor" << endl;
 }
 
 int& Polygon::operator[] (int index)

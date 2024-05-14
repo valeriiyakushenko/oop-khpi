@@ -1,6 +1,6 @@
-﻿#include <iostream>
-#ifndef POLYGON_H
+﻿#ifndef POLYGON_H
 #define POLYGON_H
+#include <iostream>
 using namespace std;
 
 class Polygon
