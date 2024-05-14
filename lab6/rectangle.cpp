@@ -1,10 +1,26 @@
 ﻿#include "rectangle.h"
 
+Rectangle::Rectangle()
+{
+    name = "";
+    width = 0;
+    height = 0;
+    count++;
+}
+
 Rectangle::Rectangle(string name, double width, double height)
 {
     this->name = name;
     this->width = width;
     this->height = height;
+    count++;
+}
+
+Rectangle::Rectangle(const Rectangle& other)
+{
+    name = other.name;
+    width = other.width;
+    height = other.height;
     count++;
 }
 
