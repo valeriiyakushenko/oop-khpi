@@ -40,7 +40,7 @@ int& Polygon::operator[] (int index)
     return sides[index];
 }
 
-void Polygon:: operator() (int n)
+void Polygon::operator() (int n)
 {
     for (int i = 0; i < size; i++)
         sides[i] = n * sides[i];
