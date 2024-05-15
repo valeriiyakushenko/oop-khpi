@@ -1,72 +1,52 @@
 ﻿#include <iostream>
-#include <string>
+#include <cmath>
 
 using namespace std;
 
-class Animal
+class Solid
 {
 protected:
-	int size;
+	double size;
 
 public:
-	void setSize(int s)
-	{
-		size = s;
-	}
+    void setSize(double size)
+    {
+        this->size = size;
+    }
 
-	virtual string soundsLike() = 0;
+	virtual double area() = 0;
+};
+
+class Sphere : public Solid
+{
+public:
+    double area() override
+    {
+        return 4 * M_PI * pow(size, 2);
+    }
 
 };
 
-class Cat : public Animal
+class Cube : public Solid
 {
 public:
-	string  soundsLike()
-	{
-		return "Meow!";
-	}
-
-};
-
-class Dog : public Animal 
-{
-public:
-	string  soundsLike() 
-	{
-		return "Woof!";
-	}
-
-};
-
-class Tiger : public Cat 
-{
-public:
-	string  soundsLike() 
-	{
-		if (size < 50)
-			return Cat::soundsLike();
-		else
-			return "RRRRR!";
-	}
+    double area() override
+    {
+        return 6 * pow(size, 2);
+    }
 
 };
 
 int main()
 {
-	Animal* a;
-	Cat cat;
-	Dog dog;
-	Tiger tiger;
+    Sphere s;
+    Cube c;
 
-	tiger.setSize(60);
-	a = &cat;
-	cout << "A cat says " << a->soundsLike() << endl;
+    s.setSize(5.3);
+    c.setSize(3.8);
 
-	a = &dog;
-	cout << "A dog says " << a->soundsLike() << endl;
+    cout << s.area() << endl;
+    cout << c.area() << endl;
 
-	a = &tiger;
-	cout << "A tiger says " << a->soundsLike() << endl;
-
-	return 0;
+ 	return 0;
 }
