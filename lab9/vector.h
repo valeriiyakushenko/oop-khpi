@@ -9,23 +9,23 @@ class Vector
 {
 private:
     int size;
-    int* beg;
+    int* data;
 
 public:
     Vector();
-    Vector(int s);
-    Vector(int s, int* mas);
-    Vector(const Vector& v);
+    Vector(int size);
+    Vector(int size, int* data);
+    Vector(const Vector& other);
     ~Vector();
 
-    const Vector& operator=(const Vector& v);
-    int operator[](int i);
-    Vector operator+(int a);
-    Vector operator--();
+    int operator[] (int index);
+    int operator() ();
+    Vector operator- (int num);
+    Vector operator+ (int num);
+    Vector operator= (const Vector& other);
 
-    friend ostream& operator<<(ostream& out, const Vector& v);
-    friend istream& operator>>(istream& in, Vector& v);
-
+    friend ostream& operator<< (ostream& out, const Vector& other);
+    friend istream& operator>> (istream& in, Vector& other);
 };
 
 #endif

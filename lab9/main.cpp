@@ -8,28 +8,36 @@ int main()
 {
     try
     {
-        Vector x(2);
+        Vector x(6);
         Vector y;
+        Vector z;
+        cout << "x: " << x << endl;
+        cout << "y: " << y << endl;
+        cout << "z: " << y << endl << endl;
 
-        cout << x;
-        cout << "Nomer?";
-        int i;
-        cin >> i;
-
-        cout << x[i] << endl;
+        cout << "y = x + 3" << endl;
+        cout << "z = x - 3" << endl;
         y = x + 3;
+        z = x - 3;
 
-        cout << y;
-        --x;
-        cout << x;
-        --x;
-        cout << x;
-        --x;
+        cout << "x: " << x << endl;
+        cout << "y: " << y << endl;
+        cout << "z: " << z << endl<< endl;
+
+        cout << "z()" << endl;
+        cout << z() << endl << endl;
+
+        cout << "y[7]" << endl;
+        cout << y[7] << endl;
+        cout << "z[6]" << endl;
+        cout << z[6] << endl << endl;
+
+
     }
 
-    catch (Error& e)
+    catch (Error& error)
     {
-        e.what();
+        error.what();
     }
 
     return 0;

@@ -11,9 +11,9 @@ private:
     string str;
 
 public:
-    Error(string s)
+    Error(string str)
     {
-        str = s;
+        this->str = str;
     }
 
     void what()

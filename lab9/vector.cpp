@@ -4,103 +4,129 @@
 Vector::Vector()
 {
     size = 0;
-    beg = 0;
+    data = 0;
 }
 
-Vector::Vector(int s)
+Vector::Vector(int size)
 {
-    if (s > MAX_SIZE) throw Error("Vector length more than MAXSIZE\n");
-    size = s;
-    beg = new int[s];
+    if (size > MAX_SIZE) throw Error("Vector length more than MAXSIZE\n");
+
+    this->size = size;
+    data = new int[size];
+
     for (int i = 0; i < size; i++)
-        beg[i] = i + 5;
+    {
+        data[i] = i;
+    }
 }
 
-Vector::Vector(const Vector& v)
+Vector::Vector(int size, int* data)
 {
-    size = v.size;
-    beg = new int[size];
+    if (size > MAX_SIZE) throw Error("Vector length more than MAXSIZE\n");
+
+    this->size = size;
+    this->data = new int[size];
+
     for (int i = 0; i < size; i++)
-        beg[i] = v.beg[i];
+    {
+        this->data[i] = data[i];
+    }
+}
+
+Vector::Vector(const Vector& other)
+{
+    size = other.size;
+    data = new int[size];
+
+    for (int i = 0; i < size; i++)
+    {
+        data[i] = other.data[i];
+    }
 }
 
 Vector::~Vector()
 {
-    if (beg != 0) delete[]beg;
+    delete[]data;
 }
 
-Vector::Vector(int s, int* mas)
+int Vector::operator[] (int index)
 {
-    if (s > MAX_SIZE) throw Error("Vector length more than MAXSIZE\n");
-    size = s;
-    beg = new int[size];
-    for (int i = 0; i < size; i++)
-        beg[i] = mas[i];
+    if (index < 0) throw Error("Error: index < 0");
+    if (index >= size) throw Error("Error: index > size");
+
+    return data[index];
 }
 
-const Vector& Vector::operator =(const Vector& v)
+int Vector::operator() ()
 {
-    if (this == &v)return *this;
-    if (beg != 0) delete[]beg;
-    size = v.size;
-    beg = new int[size];
-    for (int i = 0; i < size; i++)
-        beg[i] = v.beg[i];
-    return*this;
+    return size;
 }
 
-ostream& operator<<(ostream& out, const Vector& v)
-{
-    if (v.size == 0) out << "Empty\n";
-    else
-    {
-        for (int i = 0; i < v.size; i++)
-            out << v.beg[i] << " ";
-        out << endl;
-    }
-    return out;
-}
-
-istream& operator >>(istream& in, Vector& v)
-{
-    for (int i = 0; i < v.size; i++)
-    {
-        cout << ">";
-        in >> v.beg[i];
-    }
-    return in;
-}
-
-int Vector::operator [](int i)
-{
-    if (i < 0) throw Error("index <0");
-    if (i >= size) throw Error("index>size");
-    return beg[i];
-}
-
-Vector Vector::operator +(int a)
+Vector Vector::operator- (int num)
 {
     if (size + 1 == MAX_SIZE) throw Error("Vector is full");
-    Vector temp(size + 1, beg);
-    temp.beg[size] = a;
+
+    Vector temp(size - num, data);
+    for (int i = 0; i < size - num; i++)
+    {
+        temp.data[i] = i + 10;
+    }
+
     return temp;
 }
 
-Vector Vector::operator --()
+Vector Vector::operator+ (int num)
 {
-    if (size == 0) throw Error("Vector is empty");
-    if (size == 1)
+    if (size + 1 == MAX_SIZE) throw Error("Vector is full");
+
+    Vector temp(size + num, data);
+    for (int i = size; i < size + num; i++)
     {
-        size = 0;
-        delete[]beg;
-        beg = 0;
-        return *this;
+        temp.data[i] = i;
     }
-    Vector temp(size, beg);
-    delete[]beg;
-    size--;
-    beg = new int[size];
+
+    return temp;
+}
+
+Vector Vector::operator= (const Vector& other)
+{
+    if (data != 0)
+    {
+        delete[]data;
+    }
+
+    size = other.size;
+    data = new int[size];
+
     for (int i = 0; i < size; i++)
-        beg[i] = temp.beg[i];
-    return*this;
+    {
+        data[i] = other.data[i];
+    }
+
+    return *this;
+}
+
+ostream& operator<< (ostream& out, const Vector& other)
+{
+    if (other.size == 0) out << "Empty";
+
+    else
+    {
+        for (int i = 0; i < other.size; i++)
+        {
+            out << other.data[i] << " ";
+        }
+    }
+
+    return out;
+}
+
+istream& operator>> (istream& in, Vector& other)
+{
+    for (int i = 0; i < other.size; i++)
+    {
+        cout << ">";
+        in >> other.data[i];
+    }
+    return in;
 }
