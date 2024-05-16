@@ -1,71 +1,70 @@
 ﻿#include "taxi.h"
-using namespace std;
 
-void Taxi::setName(char* n) {
-    strcpy(name, n);
+void Taxi::setName(string name)
+{
+	this->name = name;
 }
 
-void Taxi::getName(char* n) {
-    strcpy(n, name);
+void Taxi::setAge(int age)
+{
+	if (age < 0) cout << "Incorrect age!" << endl;
+	else
+	{
+		this->age = age;
+	}
 }
 
-void Taxi::setAge(int s) {
-    age = s;
+void Taxi::setMark(string mark)
+{
+	this->mark = mark;
 }
 
-int Taxi::getAge() {
-    return age;
+void Taxi::setLicenseNumber(string licenseNumber)
+{
+	this->licenseNumber = licenseNumber;
 }
 
-void Taxi::setTrip(char* dep, char* des, int year, int month, int day) {
-    strcpy(departure, dep);
-    strcpy(destination, des);
-    date[trip_index][0] = year;
-    date[trip_index][1] = month;
-    date[trip_index][2] = day;
-    trip_list[trip_index][0] = departure;
-    trip_list[trip_index][1] = destination;
-    calculateStage(year, month, day);
-    trip_index++;
+void Taxi::setRating(double rating)
+{
+	if (rating < 0.0 || rating > 5.0) cout << "Incorrect rating!" << endl;
+	else
+	{
+		this->rating = rating;
+	}
 }
 
-void Taxi::getTrip(char* dep, char* des) {
-    strcpy(dep, departure);
-    strcpy(des, destination);
+string Taxi::getName()
+{
+	return name;
 }
 
-float Taxi::getSalary() {
-    return salary;
+int Taxi::getAge()
+{
+	return age;
 }
 
-void Taxi::setSalary(float s) {
-    salary = s;
+string Taxi::getMark()
+{
+	return mark;
 }
 
-void Taxi::showTrips() {
-    for (int i = 0; i < trip_index; i++)
-    {
-        cout << "Trip " << i + 1 << ", From: " << trip_list[i][0] << ", To: " << trip_list[i][1] << ", date: " << date[i][0] << '.' << date[i][1] << '.' << date[i][2] << endl;
-    }
+string Taxi::getLicenseNumber()
+{
+	return licenseNumber;
 }
 
-void Taxi::calculateStage(int currentYear, int currentMonth, int currentDay) {
-    if (trip_index == 0)
-        stage = 0;
-    else
-    {
-        int days = currentDay - date[0][2];
-        if (days < 0)
-            currentMonth -= 1;
-        int months = currentMonth - date[0][1];
-        if (months < 0)
-            currentYear -= 1;
-        stage = currentYear - date[0][0];
-    }
+double Taxi::getRating()
+{
+	return rating;
 }
 
-int Taxi::getStage(int currentYear, int currentMonth, int currentDay) {
-    if ((currentYear != date[trip_index][0]) || (currentMonth != date[trip_index][1]) || (currentDay != date[trip_index][2]))
-        calculateStage(currentYear, currentMonth, currentDay);
-    return stage;
+void Taxi::showDriver()
+{
+	cout << "Driver: " << endl;
+	cout << "	Name: " << name << endl;
+	cout << "	Age: " << age << endl;
+	cout << "	Rating: " << rating << endl;
+	cout << "	Car mark: " << mark << endl;
+	cout << "	License number: " << licenseNumber << endl;
+
 }

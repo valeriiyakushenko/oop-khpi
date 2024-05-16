@@ -1,38 +1,33 @@
 ﻿#ifndef TAXI_H
 #define TAXI_H
-
-#include <cstring>
-#include <string>
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 class Taxi
 {
 private:
-    char name[25];
-    char departure[25];
-    char destination[25];
     int age;
-    int stage;
-    int trip_index = 0;
-    float salary;
-    static const int maxlen = 255;
-    int date[maxlen][3];
-    string trip_list[maxlen][2];
-
-    void calculateStage(int currentYear, int currentMonth, int currentDay);
+    double rating;
+    string name;
+    string mark;
+    string licenseNumber;
 
 public:
-    void setName(char* n);
-    void getName(char* n);
-    void setAge(int s);
+    void setName(string name);
+    void setAge(int age);
+    void setMark(string mark);
+    void setLicenseNumber(string licenseNumber);
+    void setRating(double rating);
+
+    string getName();
     int getAge();
-    void setTrip(char* dep, char* des, int year, int month, int day);
-    void getTrip(char* dep, char* des);
-    void setSalary(float s);
-    float getSalary();
-    void showTrips();
-    int getStage(int currentYear, int currentMonth, int currentDay);
+    string getMark();
+    string getLicenseNumber();
+    double getRating();
+
+    void showDriver();
 };
 
 #endif 

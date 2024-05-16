@@ -5,20 +5,15 @@ using namespace std;
 
 int main()
 {
-    Taxi ivan;
+    Taxi a;
 
-    char name[25] = { "Ivan Ivanov" };
-    char new_name[25];
-    ivan.setName(name);
-    ivan.setSalary(15000);
-    ivan.setTrip((char*)"Kharkiv", (char*)"Kyiv", 2019, 3, 1);
-    ivan.setTrip((char*)"Kyiv", (char*)"Kharkiv", 2022, 8, 21);
-    ivan.getName(new_name);
+    a.setName("Ivan Ivanov");
+    a.setAge(25);
+    a.setMark("Toyota");
+    a.setLicenseNumber("AA 1234 AB");
+    a.setRating(4.9);
 
-    cout << new_name << endl;
-    cout << "Salary: " << ivan.getSalary() << endl;
-    ivan.showTrips();
-    cout << "Stage: " << ivan.getStage(2024, 3, 19) << endl;
+    a.showDriver();
 
     return 0;
 }
