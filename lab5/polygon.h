@@ -16,7 +16,7 @@ public:
     ~Polygon();
 
     void operator() (int n);
-    int& operator[] (int index);
+    int operator[] (int index);
     friend ostream& operator<< (ostream& output, const Polygon& other);
     friend istream& operator>> (istream& input, Polygon& other);
 };

@@ -16,8 +16,8 @@ Vector::Vector(double x, double y)
 
 Vector::Vector(const Vector& other)
 {
-    this->x = other.x;
-    this->y = other.y;
+    x = other.x;
+    y = other.y;
     cout << "Copy Constructor " << endl;
 }
 

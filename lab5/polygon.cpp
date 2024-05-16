@@ -33,17 +33,17 @@ Polygon::~Polygon()
     delete[] sides;
 }
 
-int& Polygon::operator[] (int index)
-{
-    if (index > size - 1) cout << "index > size" << endl;
-    if (index < 0) cout << "index < size" << endl;
-    return sides[index];
-}
-
 void Polygon::operator() (int n)
 {
     for (int i = 0; i < size; i++)
         sides[i] = n * sides[i];
+}
+
+int Polygon::operator[] (int index)
+{
+    if (index > size - 1) cout << "index > size" << endl;
+    if (index < 0) cout << "index < size" << endl;
+    return sides[index];
 }
 
 ostream& operator<< (ostream& output, const Polygon& other)

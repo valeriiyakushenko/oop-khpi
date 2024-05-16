@@ -13,7 +13,7 @@ private:
 public:
     Vector();
     Vector(double x, double y);
-    Vector(const Vector& src);
+    Vector(const Vector& other);
     ~Vector();
 
     void setX(double x);
