@@ -22,7 +22,7 @@ class Sphere : public Solid
 public:
     double area() override
     {
-        return 4 * M_PI * pow(size, 2);
+        return 4 * 3.14 * pow(size, 2);
     }
 
 };

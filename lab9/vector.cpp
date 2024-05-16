@@ -69,7 +69,7 @@ Vector Vector::operator- (int num)
     Vector temp(size - num, data);
     for (int i = 0; i < size - num; i++)
     {
-        temp.data[i] = i + 10;
+        temp.data[i] = i;
     }
 
     return temp;
